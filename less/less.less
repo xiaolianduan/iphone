@@ -1,0 +1,166 @@
+@import "var.less";
+*{
+  box-sizing: border-box;
+}
+.container{
+  &{
+    margin:auto;
+    width:100%;
+  }
+  &-fuild{
+    width: 100%;
+  }
+  &>.row{
+    width:100%;height:auto;
+    .clearfix
+  }
+  &-fuild>.row{
+    width:100%;height:auto;
+    .clearfix
+  }
+}
+.loop(@type:s,@i:1) when (@i<=@colNum){
+  .container>.row>.col-@{type}-@{i}{
+    width:@i/@colNum*100%;
+    float:left;
+  }
+  .container-fuild>.row>.col-@{type}-@{i}{
+    width:@i/@colNum*100%;
+    float:left;
+  }
+  .loop(@type,@i+1)
+}
+/*小屏*/
+.loop();
+.container>.row>.col-s-hide{
+  display: none;
+}
+.container-fuild>.row>.col-s-hide{
+  display: none;
+}
+/*中屏*/
+@media screen and (min-width: @num1){
+  .container{
+    width:100%;
+  }
+  .loop(m);
+  .container>.row>.col-s-hide{
+    display: block;
+  }
+  .container>.row>.col-l-hide{
+    display: block;
+  }
+  .container>.row>.col-m-hide{
+    display: none;
+  }
+  .row li:last-child{
+    text-align: center;
+  }
+  .container-fuild>.row>.col-s-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-l-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: none;
+  }
+}
+/*大屏*/
+@media screen and (min-width: @num2){
+  .container{
+    width:@num2;
+  }
+  .loop(l);
+
+  .container>.row>.col-s-hide{
+    display: block;
+  }
+  .container>.row>.col-m-hide{
+    display: block;
+  }
+  .container>.row>.col-l-hide{
+    display: none;
+  }
+  .row li:last-child{
+    text-align:center;
+  }
+
+  .container-fuild>.row>.col-s-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-l-hide{
+    display: none;
+  }
+}
+
+.clearfix(){
+  &:before,&:after{
+    content:"";
+    display: block;
+    clear:both;
+  }
+}
+
+@media screen and (max-width:740px){
+  .nav li:first-child{
+    text-align: left;
+    padding: 15px;
+  }
+  .nav li:last-child{
+    text-align: right;
+    padding-right: 15px;
+  }
+  .banner-title{
+    width: 50%;
+    height:15%;
+    margin: 10% auto 0;
+  }
+  .banner-title p{
+    font-size: 1.5em;
+    line-height: 32px;
+  }
+  .banner-son:nth-child(2) .banner-img img{
+    margin:auto;
+    width: 90%;
+  }
+  .link dl{
+    margin: 0;
+    height: 39px;
+    overflow: hidden;
+    transition: all 300ms linear;
+  }
+  .link dt{
+    width: 95%;
+    height: 39px;
+    border-bottom:1px solid #ccc;
+    line-height: 39px;
+    margin: auto;
+  }
+  .link dd{
+    line-height: 30px;
+    width: 90%;
+    margin: auto;
+  }
+  .linkbox .link dt span{
+    display:block;
+    transition: all 300ms linear;
+  }
+  .footer{
+    width: 95%;
+    margin: 30px auto;
+    line-height: 23px;
+  }
+  .china{
+    float: left;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+

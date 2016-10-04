@@ -1,0 +1,279 @@
+*{
+	box-sizing: border-box;
+}
+
+.topnavbox{
+	width: 100%;
+	height: 44px;
+	background:rgba(0,0,0,0.8);
+	transition: all 1s linear;
+}
+.topnav{
+	width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+}
+@font-face {
+font-family: 'iconfont';
+	src: url('../font/iconfont.eot');   /* IE9*/
+	src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/iconfont.woff') format('woff'),   
+	url('../font/iconfont.ttf') format('truetype'), 	
+	url('../font/iconfont.svg#iconfont') format('svg');   /* iOS 4.1- */
+}
+
+.topnav li{
+	font-size: 16px;
+	line-height: 44px;
+	float: left;
+	text-align: center;
+}
+.font{
+	font-family:"iconfont";
+	font-size: 20px;
+}
+.denghao{
+	width:19px;
+	height:2px;
+	background:white;
+	margin-top:5px;
+	transition:all 1s linear;
+}
+
+.two-list{
+	width: 100%;
+	height: 100%;
+	background:black;
+	background-clip:content-box;
+	position: absolute;
+	left:0;
+	top:0;
+	display: none;
+	border-top:44px solid rgba(0,0,0,0);
+	z-index: 999;
+}
+.two-list dd{
+	margin-left:8%;
+	width: 84%;
+	font-size: 20px;
+	text-align: left;
+	line-height: 44px;
+	border-bottom: 1px solid white;
+}
+.two-list dd a{
+	color: #ccc;
+}
+
+/*轮播图*/
+.bannerbox{
+	width: 100%;
+	height: 650px;
+	overflow: hidden;
+	position: relative;
+}
+.banner{
+	width:100%;
+	height: 100%;
+}
+.banner-son{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: white;
+	left: 0;
+}
+.banner-img img{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0; right: 0;  top:0;  bottom: 0;
+	margin: auto;
+}
+.banner-son:nth-child(1) .banner-img img{
+	width: 100%;
+}
+.banner-son:nth-child(2) .banner-img img{
+	margin-top:15%;
+	width: 90%;
+}
+.banner-son:nth-child(3) .banner-img img{
+	width: 50%;
+}
+.banner-son:nth-child(4) .banner-img img{
+	width: 50%;
+}
+
+.banner-title{
+	width: 50%;
+	height:15%;
+	margin: 3% auto 0;
+}
+.banner-title p{
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+	margin-top: 5px;
+}
+.banner-title img{
+	display: block;
+	margin: auto;
+}
+
+.btnbox{
+	width:112px;
+	height: 8px;
+	position: absolute;
+	left:0;right: 0;
+	margin: auto;
+	bottom: 2px;
+	z-index: 55;
+}
+.btnbox .btn{
+	width: 8px;
+	height: 8px;
+	border:1px solid #0070C9;
+	border-radius: 50%;
+	float: left;
+	margin-right:25px;
+	cursor: pointer;
+}
+.btnbox .btn:first-child{
+	border: none;
+	background:#666;
+}
+.btnbox .btn:last-child{
+	margin: 0;
+}
+
+.left-btn,.right-btn{
+	width: 67px;
+	height: 128px;
+	text-align: center;
+	line-height: 128px;
+	font-size: 72px;
+	position: absolute;
+	top: 50%;
+	margin-top: -64px;
+	z-index: 99;
+	cursor: pointer;
+}
+.left-btn{
+	left: 18px;
+}
+.right-btn{
+	right: 18px;
+}
+
+/*推荐专区*/
+.choosebox{
+	width: 100%;
+	margin: 30px auto;
+	overflow: hidden;
+}
+.choosebox .choose{
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	width: 25%;
+	float: left;
+}
+.choose:nth-child(1){
+	background: url(../images/pay.jpg) center;
+}
+.choose:nth-child(2){
+	background: url(../images/mac.jpg) center;
+}
+.choose:nth-child(3){
+	background: url(../images/music.jpg) center;
+}
+.choose:nth-child(4){
+	background: url(../images/beat.jpg) center;
+}
+
+
+/*外部链接开始*/
+.linkbox{
+	width: 1024px;
+	height: auto;
+	margin: 30px auto;
+	overflow: hidden;
+}
+.linkbox a:hover{
+	text-decoration: underline;
+}
+.linkbox .link{
+	width: 20%;
+	height: auto;
+	float: left;
+}
+.linkbox .link dt{
+	cursor: pointer;
+}
+.linkbox .link dt a{
+	font-weight: 600;
+	color: #333;
+	line-height: 17px;
+	font-size: 12px;
+}
+.linkbox .link dt span{
+	float: right;
+	margin-right: 5px;
+	font-size: 14px;
+	cursor:pointer;
+	display:none;
+}
+.linkbox .link dd a{
+	color: #888;
+	line-height: 17px;
+	font-size: 12px;
+}
+
+.link-bottom{
+	margin-top: 25px;
+}
+
+/*底栏开始*/
+.footer{
+	width: 1024px;
+	height: auto;
+	margin: 30px auto;
+	color: #888;
+	line-height: 30px;
+	font-size: 11px;
+}
+.footer a:hover{
+	text-decoration: underline;
+}
+.more a{
+	color: #0A76CC;
+}
+.friend-link{
+	height: 30px;
+	border-top: 1px solid #ccc;
+}
+.friend-link a{
+	border-right: 1px solid #ccc;
+	font-weight: 600;
+	color: #888;
+	padding:0 10px;
+	font-size: 11px;
+}
+.friend-link dl{
+	width: 100%;
+	height: 30px;
+}
+.friend-link dt{
+	float: left;
+	font-size: 11px;
+}
+.friend-link dd{
+	float: left;
+	font-size: 11px;
+}
+.beian{
+	width: 100%;
+	float: left;
+}
+.china{
+	float: right;
+}
